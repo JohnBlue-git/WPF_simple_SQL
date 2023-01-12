@@ -1,0 +1,55 @@
+﻿<Window x:Class="Simple_SQL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simple_SQL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900" FontSize="18" Closed="Form_Closed">
+    <Grid>
+        <ScrollViewer HorizontalAlignment="Left" Height="150" Margin="30,70,0,0" VerticalAlignment="Top" Width="207">
+            <DataGrid x:Name="CustomerGrid" Height="148" Width="200" FontSize="18" HorizontalAlignment="Center" HorizontalContentAlignment="Center" HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" RenderTransformOrigin="1.512,0.28" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "Name" Width = "80" Binding = "{Binding name}"/>
+                    <DataGridTextColumn Header = "Account" Width = "120" Binding = "{Binding account}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+        <ScrollViewer HorizontalAlignment="Left" Height="150" Margin="300,70,0,0" VerticalAlignment="Top" Width="252">
+            <DataGrid x:Name="AccountGrid" Height="148" Width="240" FontSize="18" HorizontalAlignment="Center" HorizontalContentAlignment="Center" HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" RenderTransformOrigin="1.512,0.28" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "Account" Width = "120" Binding = "{Binding account}"/>
+                    <DataGridTextColumn Header = "Balance" Width = "120" Binding = "{Binding balance}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+
+        <ScrollViewer HorizontalAlignment="Left" Height="150" Margin="600,70,0,0" VerticalAlignment="Top" Width="207">
+            <DataGrid x:Name="CrossGrid" Height="148" Width="200" FontSize="18" HorizontalAlignment="Center" HorizontalContentAlignment="Center" HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" RenderTransformOrigin="1.512,0.28" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "Name" Width = "80" Binding = "{Binding name}"/>
+                    <DataGridTextColumn Header = "Balance" Width = "120" Binding = "{Binding balance}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+        <ScrollViewer HorizontalAlignment="Left" Height="150" Margin="480,250,0,0" VerticalAlignment="Top" Width="327">
+            <DataGrid x:Name="JoinGrid" Height="148" Width="320" FontSize="18" HorizontalAlignment="Center" HorizontalContentAlignment="Center" HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" RenderTransformOrigin="1.512,0.28" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "Name" Width = "80" Binding = "{Binding name}"/>
+                    <DataGridTextColumn Header = "Account" Width = "120" Binding = "{Binding account}"/>
+                    <DataGridTextColumn Header = "Balance" Width = "120" Binding = "{Binding balance}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+        <Button x:Name="Left_Join" Content="Left Join" HorizontalAlignment="Left" Margin="124,282,0,0" VerticalAlignment="Top" Width="150" Height="46" Click="Click_Service"/>
+        <Button x:Name="Right_Join" Content="Right Join" HorizontalAlignment="Left" Margin="301,281,0,0" VerticalAlignment="Top" Width="150" Height="46" Click="Click_Service"/>
+        <Button x:Name="Above_Average" Content="Above Average" HorizontalAlignment="Left" Margin="301,355,0,0" VerticalAlignment="Top" Width="150" Height="46" Click="Click_Service"/>
+        <Button x:Name="Full_Join" Content="Full Join" HorizontalAlignment="Left" Margin="124,356,0,0" VerticalAlignment="Top" Width="150" Height="46" Click="Click_Service"/>
+
+        <Label x:Name="Customer_Table" Content="Customer Table" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Account_Table" Content="Account Table" HorizontalAlignment="Left" Margin="300,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Cross_Table" Content="Cross Table" HorizontalAlignment="Left" Margin="600,30,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
