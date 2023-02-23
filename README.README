@@ -3,6 +3,9 @@ A simple demonstration of SQL displaying, joining, and calculation on WPF.
 
 We have shown some simple SQL function such as SELECT, XXX JOIN, DECLARE, SET, and how to intergrate SQL with WPF.
 
+# Video Demonstration
+There is a Demonstration_sql.mp4
+
 # File Structure
 demonstration.webm is a video for demonstrating the operation of this WPF project.
 
